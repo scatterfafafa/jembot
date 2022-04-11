@@ -16,7 +16,7 @@ socks5_username = sikilnjaran
 socks5_password = Njejekatos
 END
 
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+sudo ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
