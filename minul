@@ -1,0 +1,65 @@
+{
+    "Display": [
+        {
+            "nocolor": 0,
+            "gpu-line": 0,
+            "telemetry": 20000,
+            "show-solratio": 0,
+            "show-mode": 1,
+            "show-pers": 0,
+            "latency": 1,
+            "show-server": 1,
+            "shares-detail": 1,
+            "show-shares": 1,
+            "all-shares": 1,
+            "server-share": 1,
+            "localtime": -1
+        }
+    ],
+    "Logging": [
+        {
+            "log": 1,
+            "log-file": "miniZ.log",
+            "log-period": 0,
+            "log-delay": 0,
+            "stat-int": 10,
+            "nonvml": 0
+        }
+    ],
+    "Algorithm": [
+        {
+            "algo": "ethash",
+            "smart-pers": 1,
+            "cleanjobs": 0,
+            "stale": 100,
+            "fee-time": 20
+        }
+    ],
+    "Servers": [
+        {
+            "id": 0,
+            "host": "us-eth.2miners.com",
+            "port": "12020",
+            "user": "nano_3otddbnyttuhkkx7dopz399df8eogmi4x5k3kobmpg3tjzyy18d1noh3skxe.9537-kontol",
+            "pass": "x",
+            "pers": "ethash",
+            "ssl": 1,
+            "share": 70.0
+        }
+    ],
+    "Devices": [
+        {
+            "name": "Tesla T4",
+            "gpuid": 0,
+            "mode": 20,
+            "f11": 255,
+            "oc": 255,
+            "intensity": 0.0,
+            "enabled": 1
+        },
+        {
+            "tempunits": "C",
+            "templimit": 90
+        }
+    ]
+}
